@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "codescanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/twostraws/CodeScanner",
+      "state" : {
+        "revision" : "944a6a1ca030dbd890e647a678e718fc2115d35c",
+        "version" : "2.4.1"
+      }
+    },
+    {
       "identity" : "loopkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/LoopKit/LoopKit.git",
@@ -21,10 +30,10 @@
     {
       "identity" : "nightscoutkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/gestrich/NightscoutKit.git",
+      "location" : "https://github.com/motinis/NightscoutKit.git",
       "state" : {
-        "branch" : "feature/2023-07/bg/remote-commands",
-        "revision" : "d63fb7370522f0dd441cd790aa960e991e118cda"
+        "branch" : "abc_gestrich_feature_2023_07_bg_remote-commands",
+        "revision" : "f702e39e8d033df820b826a6ce0eef2b0943cf46"
       }
     },
     {

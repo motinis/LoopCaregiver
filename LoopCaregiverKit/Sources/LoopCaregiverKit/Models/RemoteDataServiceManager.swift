@@ -22,6 +22,7 @@ public class RemoteDataServiceManager: ObservableObject {
     @Published public var recommendedBolus: Double?
     @Published public var currentIOB: IOBStatus?
     @Published public var currentCOB: COBStatus?
+    @Published public var autoBolusCarbsActive: Bool?
     @Published public var currentProfile: ProfileSet?
     @Published public var recentCommands: [RemoteCommand] = []
     @Published public var updating = false
@@ -154,6 +155,11 @@ public class RemoteDataServiceManager: ObservableObject {
             if let cob = deviceStatus.loopStatus?.cob,
                cob != self.currentCOB {
                 self.currentCOB = cob
+            }
+            
+            if let autoBolusCarbsActive = deviceStatus.loopStatus?.autoBolusCarbsActive,
+               autoBolusCarbsActive != self.autoBolusCarbsActive {
+                self.autoBolusCarbsActive = autoBolusCarbsActive
             }
             
             let predictedGlucoseSamples = predictedGlucoseSamples(latestDeviceStatus: deviceStatus)

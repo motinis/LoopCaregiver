@@ -58,7 +58,7 @@ struct ChartsListView: View {
                 )
             }
             .frame(maxHeight: 150.0)
-            ChartWrapperView(title: "Active Carbohydrates", subtitle: remoteDataSource.currentCOB?.formattedCOB() ?? "", hideLabels: $isInteractingWithActiveCarbsChart) {
+            ChartWrapperView(title: "Active Carbohydrates" + ((remoteDataSource.autoBolusCarbsActive ?? false) ? " 🔸" : ""), subtitle: remoteDataSource.currentCOB?.formattedCOB() ?? "", hideLabels: $isInteractingWithActiveCarbsChart) {
                 /*
                  if remoteDataSource.glucoseSamples.count > 0, remoteDataSource.predictedGlucose.count > 0 {
                  COBChartView(remoteDataSource: remoteDataSource,
