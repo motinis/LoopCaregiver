@@ -14,6 +14,7 @@ struct OverridePickerRowModel: Hashable {
     let symbol: String?
     let duration: TimeInterval
     let name: String?
+    let autoBolusCarbsActive: Bool?
     let isActive: Bool
     let indefiniteDurationAllowed: Bool
 
@@ -25,6 +26,7 @@ struct OverridePickerRowModel: Hashable {
             self.symbol = activeOverride.symbol
             self.duration = activeOverride.duration
             self.name = activeOverride.name
+            self.autoBolusCarbsActive = activeOverride.autoBolusCarbsActive
             self.isActive = true
             self.indefiniteDurationAllowed = indefiniteDurationAllowed
         } else {
@@ -33,6 +35,7 @@ struct OverridePickerRowModel: Hashable {
             self.symbol = preset.symbol
             self.duration = preset.duration
             self.name = preset.name
+            self.autoBolusCarbsActive = preset.autoBolusCarbsActive
             self.isActive = false
             self.indefiniteDurationAllowed = indefiniteDurationAllowed
         }
@@ -52,6 +55,7 @@ struct OverridePickerRowModel: Hashable {
         lhs.duration == rhs.duration &&
         lhs.targetRange == rhs.targetRange &&
         lhs.insulinNeedsScaleFactor == rhs.insulinNeedsScaleFactor &&
+        lhs.autoBolusCarbsActive == rhs.autoBolusCarbsActive &&
         lhs.isActive == rhs.isActive
     }
 }

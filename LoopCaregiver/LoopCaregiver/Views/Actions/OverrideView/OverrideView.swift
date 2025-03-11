@@ -61,6 +61,7 @@ struct OverrideView: View {
                         }
                         if viewModel.pickerSelectedRow != nil {
                             durationContainerView
+                            autoBolusCarbsContainerView
                         }
                     }
                 }
@@ -90,6 +91,18 @@ struct OverrideView: View {
             if !viewModel.indefiniteOverridesAllowed {
                 Text("Overrides with default durations can't be set to indefinite.")
                     .font(.footnote)
+            }
+        }
+    }
+    
+    @ViewBuilder var autoBolusCarbsContainerView: some View {
+        Group {
+            List {
+                Picker("Auto-Bolus Carbs", selection: $viewModel.autoBolusCarbsActive) {
+                    Text("\u{00002014}").tag(nil as Bool?)
+                    Text("🔶").tag(true)
+                    Text("❌").tag(false)
+                }
             }
         }
     }

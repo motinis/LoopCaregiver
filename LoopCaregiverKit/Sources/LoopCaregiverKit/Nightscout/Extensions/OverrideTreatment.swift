@@ -14,6 +14,7 @@ extension OverrideTreatment: Equatable {
         lhs.endDate == rhs.endDate &&
         lhs.correctionRange == rhs.correctionRange &&
         lhs.insulinNeedsScaleFactor == rhs.insulinNeedsScaleFactor &&
+        lhs.autoBolusCarbsActive == rhs.autoBolusCarbsActive &&
         lhs.reason == rhs.reason &&
         lhs.remoteAddress == rhs.remoteAddress
     }

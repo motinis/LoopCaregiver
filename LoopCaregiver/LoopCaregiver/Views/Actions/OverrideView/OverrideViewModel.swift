@@ -24,6 +24,7 @@ class OverrideViewModel: ObservableObject, Identifiable {
     @Published var durationHourSelection = 0
     @Published var durationMinuteSelection = 0
     @Published var durationExpanded = false
+    @Published var autoBolusCarbsActive: Bool? = nil
     @Published var experimentalEditPresetShowing = false
     
     init() {
@@ -42,6 +43,7 @@ class OverrideViewModel: ObservableObject, Identifiable {
                 self.enableIndefinitely = true
             }
             self.durationExpanded = false
+            self.autoBolusCarbsActive = val?.autoBolusCarbsActive
         }.store(in: &cancellables)
     }
     
