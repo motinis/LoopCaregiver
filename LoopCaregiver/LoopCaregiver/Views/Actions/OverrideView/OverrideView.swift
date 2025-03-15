@@ -100,8 +100,8 @@ struct OverrideView: View {
             List {
                 Picker("Auto-Bolus Carbs", selection: $viewModel.autoBolusCarbsActive) {
                     Text("\u{00002014}").tag(nil as Bool?)
-                    Text("🔶").tag(true)
-                    Text("❌").tag(false)
+                    Text("🔶").tag(true as Bool?)
+                    Text("❌").tag(false as Bool?)
                 }
             }
         }
