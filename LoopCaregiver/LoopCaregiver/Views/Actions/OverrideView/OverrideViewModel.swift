@@ -85,7 +85,8 @@ class OverrideViewModel: ObservableObject, Identifiable {
             return .cancel
         }
         
-        let selectedRowAndDurationAndActive = pickerSelectedRow.isActive && activeOverride?.duration == pickerSelectedDuration
+        let selectedRowAndDurationAndActive = pickerSelectedRow.isActive && activeOverride?.duration == pickerSelectedDuration && activeOverride?.autoBolusCarbsActive == autoBolusCarbsActive
+        
         if selectedRowAndDurationAndActive {
             return .cancel
         }
