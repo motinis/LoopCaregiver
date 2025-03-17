@@ -30,10 +30,10 @@
     {
       "identity" : "nightscoutkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/gestrich/NightscoutKit.git",
+      "location" : "https://github.com/motinis/NightscoutKit.git",
       "state" : {
-        "branch" : "feature/2023-07/bg/remote-commands",
-        "revision" : "d63fb7370522f0dd441cd790aa960e991e118cda"
+        "branch" : "abc_gestrich_feature_2023_07_bg_remote-commands",
+        "revision" : "e72330743734aaa4dc6f689c39cc33224d784623"
       }
     },
     {
